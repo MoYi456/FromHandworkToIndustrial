@@ -1,7 +1,5 @@
 package FHTI.content;
 
-import FHTI.content.block.ModBlocks;
-import FHTI.content.item.ModItems;
 import static mindustry.content.TechTree.*;
 
 public class ZetasTechTree {

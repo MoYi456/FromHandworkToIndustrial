@@ -2,7 +2,6 @@ package FHTI.content;
 
 import mindustry.type.Planet;
 import mindustry.world.meta.Env;
-import FHTI.content.block.ModBlocks;
 import arc.graphics.Color;
 import mindustry.content.Planets;
 import mindustry.game.Team;

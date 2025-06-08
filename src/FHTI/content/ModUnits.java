@@ -5,6 +5,7 @@ import mindustry.ai.types.BuilderAI;
 import mindustry.ai.types.CommandAI;
 import mindustry.entities.bullet.LaserBulletType;
 import mindustry.gen.Sounds;
+import mindustry.gen.UnitEntity;
 import mindustry.graphics.Pal;
 import mindustry.type.UnitType;
 import mindustry.type.Weapon;
@@ -15,10 +16,10 @@ public class ModUnits {
     public static void load() {
         primitive_silicon_based_life = new UnitType("primitive-silicon-based-life") {
             {
-                aiController = () -> new BuilderAI(true, 400f); //单位AI
+                aiController = () -> new BuilderAI(true, 400f); // 单位AI
                 controller = u -> u.team.isAI() ? aiController.get() : new CommandAI(); // 单位控制器
+                constructor = UnitEntity::create; // 单位实体
                 isEnemy = false; // 是否是敌人
-
                 lowAltitude = true; // （低空单位）视为敌人，可以被攻击
                 flying = true; // 是飞行单位
                 mineSpeed = 1f; // 采矿速度
